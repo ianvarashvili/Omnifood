@@ -12,6 +12,11 @@
      <link rel="stylesheet" href="css/queries.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" omnifood is an ai powered food subscription that will make u eat healthy again,365 days per year. its tailored to your personal tastes and nutriyional needs" />
+
+    <link rel="icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest">
 
     <script
       type="module"
@@ -22,7 +27,14 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <title>Omnifood</title>
+
+    <script defer src="js/script.js">  </script>
+
+    <script defer src=" https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+      
+  
+    <title>Omnifood &mdash; Never cook again!</title>
+
   </head>
   <body>
     <header class="header ">
@@ -34,11 +46,11 @@
 
       <nav class="nav1">
         <ul class="nav1list">
-          <li><a class="nav1-link" href="#">How it works</a></li>
-          <li><a class="nav1-link" href="#">Meals</a></li>
-          <li><a class="nav1-link" href="#">Testimonials</a></li>
-          <li><a class="nav1-link" href="#">Pricing</a></li>
-          <li><a class="nav1-link nav-cta" href="#">Try for free</a></li>
+          <li><a class="nav1-link" href="#how">How it works</a></li>
+          <li><a class="nav1-link" href="#meals">Meals</a></li>
+          <li><a class="nav1-link" href="#testimonials">Testimonials</a></li>
+          <li><a class="nav1-link" href="#pricing">Pricing</a></li>
+          <li><a class="nav1-link nav-cta" href="#cta">Try for free</a></li>
         </ul>
       </nav>
 
@@ -65,8 +77,8 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#" class="btn btnfull marginrightsm">Start eating well</a>
-            <a href="#" class="btn btnoutline">Learn more &rarr;</a>
+            <a href="#cta" class="btn btnfull marginrightsm">Start eating well</a>
+            <a href="#how" class="btn btnoutline">Learn more &rarr;</a>
 
             <div class="deliveredmeals">
               <div class="deliveredimgs">
@@ -83,12 +95,18 @@
             </div>
           </div>
 
-          <div class="heroimgbox">
-            <img
-              src="img/hero.png"
+           <div class="heroimgbox">
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp">
+              <source srcset="img/hero-min.png" type="image/png">
+
+               <img
+              src="img/hero.webp"
               class="heroimg"
               alt="woman enjoying food, meals,food bowls on a table"
             />
+            </picture>
+           
           </div>
         </div>
       </section>
@@ -113,7 +131,7 @@
         </div>
       </section>
 
-      <section class="sectionHow">
+      <section class="sectionHow" id="how">
         <div class="container">
           <span class="subheading">How It Works</span>
           <h2 class="headingsecondary">
@@ -186,7 +204,7 @@
         </div>
       </section>
 
-      <section class="sectionmeals">
+      <section class="sectionmeals" id="meals">
         <div class="container centertext">
           <span class="subheading">Meals</span>
           <h2 class="headingsecondary">
@@ -311,7 +329,7 @@
         </div>
       </section>
 
-      <section class="sectiontestimonials">
+      <section class="sectiontestimonials" id="testimonials">
         <div class="testimonialscontainer">
           <span class="subheading">Testimonials</span>
           <h2 class="headingsecondary">Once you try it, you can't go back</h2>
@@ -403,7 +421,7 @@
         </div>
       </section>
 
-      <section class="sectionpricing">
+      <section class="sectionpricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="headingsecondary">
@@ -523,7 +541,7 @@
         </div>
       </section>
 
-      <section class="sectioncta">
+      <section class="sectioncta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-textbox">
@@ -534,13 +552,14 @@
                 first meal is on us!
               </p>
 
-              <form class="ctaform" action="#">
+              <form class="ctaform" name="signup" netlify>
                 <div>
                   <label for="fullname">Full Name</label>
                   <input
                     id="fullname"
                     type="text"
                     placeholder="John Smith"
+                    name="fullname"
                     required
                   />
                 </div>
@@ -551,6 +570,7 @@
                     id="email"
                     type="email"
                     placeholder="me@example.com"
+                    name="email"
                     required
                   />
                 </div>
@@ -558,7 +578,7 @@
                 <div>
                   <label for="selectwhere">Where did you hear from us?</label>
 
-                  <select id="selectwhere" required>
+                  <select id="selectwhere"  name="selectwhere" required>
                     <option value="">Please choose one option</option>
                     <option value="friends">friends and family</option>
                     <option value="youtube">YouTube video</option>
@@ -602,7 +622,7 @@
 
            </ul>
 
-           <p class="copyright">Copyright &copy; 2025 by Omnifood, Inc. All rights reserved.</p>
+           <p class="copyright">Copyright &copy; <span class="year">2027</span> by Omnifood, Inc. All rights reserved.</p>
 
       </div>
       <div class="addresscol">
